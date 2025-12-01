@@ -1,10 +1,10 @@
 env_name           = "dev"
 project_name       = "eks-demo"
-aws_region         = "us-east-2"
+aws_region         = "us-east-1"
 nat_gateway_count  = 1
 node_instance_types = ["t3.medium"]
 node_desired_capacity = 2
 node_min_size         = 1
 node_max_size         = 3
-node_capacity_type    = "SPOT"
+node_capacity_type    = "ON_DEMAND"
 cluster_public_access_cidrs = ["0.0.0.0/0"]

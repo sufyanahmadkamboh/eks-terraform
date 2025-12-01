@@ -1,15 +1,15 @@
 terraform {
   backend "s3" {
-    bucket         = "dev-eks-bucket-747034604262"
+    bucket         = "dev-eks-bucket-747034604262-us-east-1"
     key            = "eks/dev/terraform.tfstate"
-    region         = "us-east-2"
+    region         = "us-east-1"
     dynamodb_table = "dev-terraform-locks"
     encrypt        = true
   }
 }
 
 provider "aws" {
-  region  = "us-east-2"
+  region  = "us-east-1"
   profile = "" # or a dedicated dev profile if you prefer
 
   default_tags {
@@ -26,13 +26,13 @@ module "stack" {
 
   env_name            = "dev"
   project_name        = "eks-demo"
-  aws_region          = "us-east-2"
+  aws_region          = "us-east-1"
   aws_profile         = "" # override if using a named profile
   vpc_cidr            = "10.0.0.0/16"
   nat_gateway_count   = 1 # cost-saving dev
 
   kubernetes_version  = "1.30"
-  node_instance_types = ["t3.small"]
+  node_instance_types = ["t3.medium"]
 
   node_desired_capacity = 2
   node_min_size         = 1
