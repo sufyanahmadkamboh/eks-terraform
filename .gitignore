@@ -1,0 +1,62 @@
+# ---------------------------
+# Terraform Build Artifacts
+# ---------------------------
+
+# Local Terraform working directory
+.terraform/
+
+# Local terraform state files (NEVER commit)
+*.tfstate
+*.tfstate.*
+terraform.tfstate
+terraform.tfstate.backup
+crash.log
+errored.tfstate
+
+# Local override files (developer machine-specific)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform plan files
+*.tfplan
+
+# ---------------------------
+# Environment & Credentials
+# ---------------------------
+
+# AWS credentials stored locally (NEVER push)
+.aws/
+*.pem
+*.key
+*.pfx
+
+# PowerShell or bash env var files
+.env
+.env.*
+*.env
+
+# VSCode settings (optional)
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Temporary editor / OS files
+*.tmp
+*.swp
+*.swo
+
+# Log files
+*.log
+
+# ---------------------------
+# Backend config (Optional)
+# ---------------------------
+# Don’t push backend.hcl files if they contain bucket names or secrets
+backend.hcl
+*.hcl
+

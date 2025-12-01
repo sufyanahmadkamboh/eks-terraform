@@ -1,0 +1,10 @@
+env_name           = "stage"
+project_name       = "eks-demo"
+aws_region         = "us-east-2"
+nat_gateway_count  = 2
+node_instance_types = ["t3.large"]
+node_desired_capacity = 3
+node_min_size         = 2
+node_max_size         = 6
+node_capacity_type    = "ON_DEMAND"
+cluster_public_access_cidrs = ["203.0.113.0/24"]

@@ -1,0 +1,40 @@
+-> first install aws cli and terraform in your windows
+
+--> cd envs/dev
+
+-> aws configure create iam user and access key and then first run (aws configure --profile eks-terraform)  
+    key:
+    secret
+    region
+    formate: json
+    run (aws sts get-caller-identity --profile eks-terraform) to check
+
+-> set profile run ($env:AWS_PROFILE = "eks-terraform")
+
+-> change envs/dev/main.tf file bucket name and then run inside then folder envs/dev/ (aws s3api create-bucket `
+  --bucket dev-eks-bucket-747034604262 `
+  --region us-east-2 `
+  --create-bucket-configuration LocationConstraint=us-east-2 `
+  --profile eks-terraform
+)
+
+-> and then enable versionaning (aws s3api put-bucket-versioning `
+  --bucket dev-eks-bucket-747034604262 `
+  --versioning-configuration Status=Enabled `
+  --profile eks-terraform
+)
+
+-> and then enable encription run (aws s3api put-bucket-encryption `
+  --bucket dev-eks-bucket-747034604262 `
+  --server-side-encryption-configuration file://encryption.json `
+  --profile eks-terraform
+)
+
+after than run (terraform init)
+
+terraform plan
+
+terraform apply
+
+
+

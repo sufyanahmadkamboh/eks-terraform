@@ -1,0 +1,12 @@
+terraform {
+  backend "s3" {
+    # DO NOT COMMIT REAL VALUES HERE.
+    # Use -backend-config or environment-specific backend files instead.
+
+    bucket         = "my-terraform-state-bucket"
+    key            = "eks-terraform/dev/terraform.tfstate"
+    region         = "us-east-2"
+    dynamodb_table = "my-terraform-state-locks"
+    encrypt        = true
+  }
+}
