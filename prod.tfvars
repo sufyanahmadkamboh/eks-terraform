@@ -1,10 +1,10 @@
 env_name           = "prod"
-project_name       = "eks-demo"
-aws_region         = "us-east-2"
+project_name       = "eks-mak-fun"
+aws_region         = "us-east-1"
 nat_gateway_count  = 2
-node_instance_types = ["m6i.large"]
-node_desired_capacity = 4
-node_min_size         = 3
-node_max_size         = 8
+node_instance_types = ["t3.large"]
+node_desired_capacity = 2
+node_min_size         = 2
+node_max_size         = 4
 node_capacity_type    = "ON_DEMAND"
 cluster_public_access_cidrs = ["198.51.100.0/24"]
