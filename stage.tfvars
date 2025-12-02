@@ -1,6 +1,6 @@
 env_name           = "stage"
 project_name       = "eks-demo"
-aws_region         = "us-east-2"
+aws_region         = "us-east-1"
 nat_gateway_count  = 2
 node_instance_types = ["t3.large"]
 node_desired_capacity = 3

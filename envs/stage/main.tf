@@ -3,7 +3,7 @@ terraform {
 }
 
 provider "aws" {
-  region  = "us-east-2"
+  region  = "us-east-1"
   profile = ""
 
   default_tags {
@@ -20,11 +20,11 @@ module "stack" {
 
   env_name          = "stage"
   project_name      = "eks-demo"
-  aws_region        = "us-east-2"
+  aws_region        = "us-east-1"
   vpc_cidr          = "10.1.0.0/16"
   nat_gateway_count = 2
 
-  kubernetes_version  = "1.30"
+  kubernetes_version  = "1.31"
   node_instance_types = ["t3.large"]
 
   node_desired_capacity = 3

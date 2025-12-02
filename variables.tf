@@ -12,7 +12,7 @@ variable "env_name" {
 variable "aws_region" {
   type        = string
   description = "AWS region to deploy into."
-  default     = "us-east-2"
+  default     = "us-east-1"
 }
 
 variable "aws_profile" {
@@ -39,8 +39,8 @@ variable "nat_gateway_count" {
 
 variable "kubernetes_version" {
   type        = string
-  description = "Kubernetes version for EKS (e.g., 1.30)."
-  default     = "1.30"
+  description = "Kubernetes version for EKS (e.g., 1.31)."
+  default     = "1.31"
 }
 
 variable "cluster_name_suffix" {

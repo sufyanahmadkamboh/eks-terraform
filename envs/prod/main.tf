@@ -30,7 +30,7 @@ module "stack" {
   vpc_cidr          = "11.0.0.0/16"
   nat_gateway_count = 2
 
-  kubernetes_version  = "1.30"
+  kubernetes_version  = "1.31"
   node_instance_types = ["t3.large"]
 
   node_desired_capacity = 2

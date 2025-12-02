@@ -6,7 +6,7 @@ locals {
   # Use exactly two AZs for this VPC (first two in the region).
   azs = slice(data.aws_availability_zones.available.names, 0, 2)
 
-  # Map indexes to az names: {"0" = "us-east-2a", "1" = "us-east-2b"}
+  # Map indexes to az names: {"0" = "us-east-1a", "1" = "us-east-1b"}
   az_map = { for idx, az in local.azs : tostring(idx) => az }
 
   # Split CIDR into public/private ranges. Using different "newbits" and indexes.
