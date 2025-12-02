@@ -39,8 +39,8 @@ variable "nat_gateway_count" {
 
 variable "kubernetes_version" {
   type        = string
-  description = "Kubernetes version for EKS (e.g., 1.31)."
-  default     = "1.31"
+  description = "Kubernetes version for EKS (e.g., 1.34)."
+  default     = "1.34"
 }
 
 variable "cluster_name_suffix" {
