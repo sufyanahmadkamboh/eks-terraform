@@ -71,7 +71,7 @@ variable "enable_cluster_creator_admin_permissions" {
 variable "node_instance_types" {
   type        = list(string)
   description = "Instance types for EKS managed node group."
-  default     = ["t3.medium"]
+  default     = ["t3.large"]
 }
 
 variable "node_desired_capacity" {

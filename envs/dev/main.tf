@@ -32,7 +32,7 @@ module "stack" {
   nat_gateway_count   = 1 # cost-saving dev
 
   kubernetes_version  = "1.34"
-  node_instance_types = ["t3.medium"]
+  node_instance_types = ["t3.large"]
 
   node_desired_capacity = 2
   node_min_size         = 1
